@@ -122,8 +122,8 @@ button:hover{
 #gallery {
   background-color: #f9f9f9;
   width: 100vw;
-  height: 100vh;
-  padding: 50px 20px;
+  height: 170vh;
+  padding: 100px 20px;
 }
 
 #gallery .container {
