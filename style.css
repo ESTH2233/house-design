@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+/* the landing page image design */
+.banner{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(images/pexels-houzlook-3356416.jpg);
+    background-size:cover ;
+    background-position: center;
+}
+/* style for the navbar */
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* style for my header */
+.logo{
+    font-size: 25px;
+    width: 120px;
+    color: whitesmoke;
+    cursor: pointer;
+}
+/* style to remove the default listing and displaying inline-block */
+.navbar ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+/* style to remove the default underline and change of the navbar color */
+.navbar ul li a {
+    background-color: transparent;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+/* style for the navbar to give it a smooth transition of an aquamarine-like color */
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+}
+/* end of the styling for the transition */
+
+/* style to make the content of the landing page move to the center */
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+
+.content h1{
+    font-size: 70px;
+    margin-top: 80px;
+}
+
+.content p {
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+/* style for the button */
+button{
+    width: 200px;
+    padding: 15px 0;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+    border: 2px solid #009688;
+    margin: 20px 10px;
+}
+
+button a{
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+span{
+    background: #009688;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span{
+    width: 100%;
+}
+
+button:hover{
+    border: none;
+}
+
