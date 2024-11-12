@@ -23,8 +23,8 @@
 }
 /* style for my header */
 .logo{
-    font-size: 25px;
-    width: 120px;
+    width: 220px;
+    background-color: transparent;
     color: whitesmoke;
     cursor: pointer;
 }
@@ -122,8 +122,20 @@ button:hover{
 #gallery {
   background-color: #f9f9f9;
   width: 100vw;
+  height: 300vh;
+  padding: 100px 20px;
+}
+
+#gallery2 {
+  background-color: #f9f9f9;
+  width: 100vw;
   height: 170vh;
   padding: 100px 20px;
+}
+#gallery2 .container{
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 #gallery .container {
@@ -138,11 +150,40 @@ button:hover{
   margin-bottom: 20px;
 }
 
+#gallery2 h2 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+
+
+#gallery .designs{
+  font-size: 36px;
+  color: #333;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
 #gallery p {
   font-size: 18px;
   color: #666;
   margin-bottom: 40px;
 }
+
+#gallery2 .designs{
+  font-size: 36px;
+  color: #333;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+#gallery2 p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
 
 /* Gallery Grid Styling */
 .gallery-grid {
@@ -201,6 +242,7 @@ button:hover{
   color: #666;
   margin-bottom: 40px;
   margin-top: 50px;
+  margin-left: 40px;
   width: 50%;
   text-align: justify;
   line-height: 1.7;
@@ -208,11 +250,12 @@ button:hover{
 
 .image img {
   width: 400px;
-  height: 315px;
-  object-fit: contain;
+  height: 400px;
+  border-radius: 100%;
+  object-fit: cover;
   position: absolute;
   top: 200px;
-  margin-left: 30px;
+  margin-left: 70px;
 }
 
 .contact-section{
@@ -320,4 +363,139 @@ button:hover{
 .contact-info p a {
   text-decoration: none;
   color: #333;
+}
+/* Testimonials Section */
+.testimonials {
+    padding: 60px 20px;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+.testimonial-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.testimonials header {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+.testimonial-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 320px;
+    height: 400px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-item:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-img img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.testimonial-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.testimonial-content h4 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.testimonial-content .role {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+
+
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    margin-top: 20px;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.footer-section h2 {
+    margin-bottom: 10px;
+}
+
+.footer-section p, .footer-section a {
+    color: #fff;
+    text-decoration: none;
+    
+}
+
+.footer-section ul li {
+  list-style-type: none;
+  margin-top: 10px;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+.socials {
+    margin-top: 10px;
+}
+
+.socials a {
+    margin: 0 10px;
+}
+
+.socials img {
+    width: 24px; /* Adjust size as needed */
+    height: 24px; /* Adjust size as needed */
 }
