@@ -487,15 +487,67 @@ button:hover{
     padding-top: 10px;
 }
 
-.socials {
-    margin-top: 10px;
+/* Hamburger icon styles */
+.hamburger {
+    display: none; /* Hide by default */
+    cursor: pointer;
+    font-size: 24px; /* Adjust size as needed */
+    color: #fff; /* Change to your preferred color */
 }
 
-.socials a {
-    margin: 0 10px;
+.close{
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #fff;
 }
 
-.socials img {
-    width: 24px; /* Adjust size as needed */
-    height: 24px; /* Adjust size as needed */
+.menu-toggle{
+  display: none;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none; /* Hide menu items by default */
+        flex-direction: column; /* Stack items vertically */
+        position: absolute; /* Position it below the navbar */
+        top: 60px; /* Adjust based on your navbar height */
+        left: 0;
+        background-color: transparent; /* Background color for dropdown */
+        backdrop-filter: blur(50px);
+        width: 100%; /* Full width */
+        height: 170vh;
+        z-index: 1000; /* Ensure it appears above other elements */
+
+    }
+    .menu-toggle:checked + .hamburger {
+        display: none; /* Hide hamburger icon when menu is open */
+    }
+
+    .menu-toggle:checked + .hamburger + .close {
+        display: flex; /* Show close icon when menu is open */
+    }
+
+    .menu-toggle:checked + .hamburger + .close + ul {
+        display: flex; /* Show menu items when active */
+    }
+    .menu-toggle:checked ~ ul{
+      display: flex;
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger icon on mobile */
+    }
+
+    .navbar ul li {
+        margin: 15px 0; /* Adjust margin for vertical stacking */
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+
+    .close{
+      display: none;
+    }
 }
